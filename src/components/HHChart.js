@@ -63,7 +63,7 @@ const HHChart = ({ Iinj, totalTime, stimDur }) => {
                     paper_bgcolor: colorChoices['plot_background'],
                     plot_bgcolor: colorChoices['plot_background'],
 
-                    title:'Hodgkin & Huxley Model',
+                    title:'Hodgkin & Huxley Model (Current)',
                     xaxis: {
                         title: 'time (ms)',
                         zeroline: false,

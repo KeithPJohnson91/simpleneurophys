@@ -50,6 +50,7 @@ export default function MySlider({ label, trackColor, min, max, value, onChange 
   
   
   const classes = Nested({trackColor});
+  const maxminstep = Math.round((max-min)/4);
 
   return (
     <div className={classes.root}>
@@ -70,8 +71,9 @@ export default function MySlider({ label, trackColor, min, max, value, onChange 
         step={.1}
         min={min}
         max={max}
+        maxminstep = {maxminstep}
         onChange={onChange}
-        marks={[min, 0, max/2, max].map(i => ({
+        marks={[min,min+maxminstep, min+2*maxminstep, min+3*maxminstep, max].map(i => ({
             label: i,
             value: i
           }))}
