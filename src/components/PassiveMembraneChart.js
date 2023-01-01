@@ -45,7 +45,6 @@ const PassiveMembraneChart = ({ V0, R,C,Iinj }) => {
         
     }
 
-    console.log(time);
     const trace1 = { x:time, y:mem.V, type:'scatter', mode:'lines', name:'V', line: { color: colorChoices['V']}}
     const trace2 = { x:time, y:mem.Ic, type:'scatter', mode:'lines', name:'I<sub>C</sub>',  yaxis: 'y2', line: { color: colorChoices['Ic']}, opacity:0.5}
     const trace3 = { x:time, y:mem.V, type:'scatter', mode:'lines', name:'I<sub>R</sub>',  yaxis: 'y2', line: { color: colorChoices['Ir'], width:4, dash:'dot'}, opacity:0.5}
