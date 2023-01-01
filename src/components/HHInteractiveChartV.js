@@ -11,7 +11,7 @@ const PassiveMembraneInteractiveChart = ({_classNameComponents}) => {
     const [Svalue, setSValue] = useState(10);
 
     const updateVVal = (e, v) => {
-        setVValue(v);
+        setVValue(v+65);
     }
 
     const updateTVal = (e, v) => {

@@ -1,46 +1,37 @@
-import { useState} from 'react';
+import Home from './components/Home';
 import HHInteractiveChart from './components/HHInteractiveChart';
 import HHInteractiveChartV from './components/HHInteractiveChartV';
 import PassiveMembraneInteractiveChart from './components/PassiveMembraneInteractiveChart';
 import Navbar from './components/Navbar';
 import './App.css';
-import colorChoices from './colorChoices';
+
 
 
 function App() {
 
-  
-  const [Ivalue, setIValue] = useState(0);
-  const [Tvalue, setTValue] = useState(25);
-  const [Svalue, setSValue] = useState(10);
-
-  const updateIVal = (e, v) => {
-    setIValue(v);
-  }
-  const updateTVal = (e, v) => {
-    setTValue(v);
-  }
-
-  const updateSVal = (e, v) => {
-    setSValue(v);
-  }
- 
-
   const _classNameComponents = "App-body";
+  let Component;
+  let _header = true;
+  switch(window.location.pathname){
+    case "/hh":
+      Component = HHInteractiveChart
+      break
+    case "/hhv":
+      Component = HHInteractiveChartV
+      break
+    case "/passive":
+      Component = PassiveMembraneInteractiveChart
+      break
+    default:
+      Component = Home
+      _header =false
+  };
+
   
   return (
-    
     <div className="App">
-      
-    
-    <Navbar />
-    <body className="App-body">
-
-      <HHInteractiveChart _classNameComponents={_classNameComponents}/>
-      <HHInteractiveChartV _classNameComponents={_classNameComponents}/>    
-      <PassiveMembraneInteractiveChart _classNameComponents={_classNameComponents}/>
-    </body>
-
+      {_header && <Navbar />}
+      <Component _classNameComponents={_classNameComponents}/>
     </div>
   );
 }

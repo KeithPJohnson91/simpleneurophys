@@ -3,11 +3,11 @@ import Plot from 'react-plotly.js'
 import PlotlyDark from "./PlotlyDark";
 import PassiveMembrane from './PassiveMembrane';
 import colorChoices from "../colorChoices";
-import { sizeHeight } from "@mui/system";
+
 
 
 const PassiveMembraneChart = ({ V0, R,C,Iinj }) => {
-    var mem = new PassiveMembrane(V0=V0,R=R, C=C)
+    var mem = new PassiveMembrane(V0,R, C)
     const preTime = 10;
     const totalTime = 150;
     const dt = 0.005;
@@ -32,7 +32,6 @@ const PassiveMembraneChart = ({ V0, R,C,Iinj }) => {
             I.push(Ii);
             t = dt+(i*dt)
             time.push(t);
-            //mem.updateV(Iinj,t, endPulse); //careful this needs to be fixed
             mem.charge(Iinj,t); 
         } else{
             Ii = 0;
@@ -67,7 +66,7 @@ const PassiveMembraneChart = ({ V0, R,C,Iinj }) => {
                     paper_bgcolor: colorChoices['plot_background'],
                     plot_bgcolor: colorChoices['plot_background'],
 
-                    title:'Passive Membrane',
+                    title:'Passive Membrane (RC Circuit)',
                     xaxis: {
                         title: 'time (ms)',
                         zeroline: false,
