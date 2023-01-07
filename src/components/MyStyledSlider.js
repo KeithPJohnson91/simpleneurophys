@@ -36,7 +36,7 @@ const useStyles = makeStyles({
       "&>*": {
           marginTop: 8,
           marginLeft: 12,
-          background: (props) => props.trackColor,
+          background: (props) => {return props.trackColor !== 'white' ? props.trackColor:'black'},
       }
     }
   });
@@ -67,7 +67,7 @@ export default function MySlider({ label, trackColor, min, max, value, onChange 
           markLabel: classes.markLabel
         }}
         valueLabelDisplay="auto"
-        value={value}
+        value={value.toFixed(1)}
         step={.1}
         min={min}
         max={max}

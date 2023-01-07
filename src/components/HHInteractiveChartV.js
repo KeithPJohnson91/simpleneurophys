@@ -27,9 +27,9 @@ const PassiveMembraneInteractiveChart = ({_classNameComponents}) => {
     return (
         <div className={_classNameComponents}>
             <HHChartV Vhold={Vvalue} totalTime={Tvalue} stimDur={Svalue} />
-            <MySlider key="503" label={"Voltage Step"} trackColor={colorChoices['V']} min={-110} max={10} value={Vvalue-65} onChange={updateVVal}/>
-            <MySlider key="504" label={"Simulation Time"} trackColor={colorChoices['simulation_time']} min={0} max={150} value={Tvalue} onChange={updateTVal} />
-            <MySlider key="505" label={"Stimulus Duration"} trackColor={colorChoices['stimulus_duration']} min={0} max={150} value={Svalue} onChange={updateSVal} />
+            <MySlider key="503" label={"Voltage Step (mV)"} trackColor={colorChoices['V']} min={-110} max={10} value={Vvalue-65} onChange={updateVVal}/>
+            <MySlider key="504" label={"Simulation Time (ms)"} trackColor={colorChoices['simulation_time']} min={0} max={200} value={Tvalue} onChange={updateTVal} />
+            <MySlider key="505" label={"Stimulus Duration (ms)"} trackColor={colorChoices['stimulus_duration']} min={0} max={200} value={Svalue} onChange={updateSVal} />
         </div>
     )
     

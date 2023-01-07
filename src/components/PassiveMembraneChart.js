@@ -47,7 +47,7 @@ const PassiveMembraneChart = ({ V0, R,C,Iinj }) => {
     const trace1 = { x:time, y:mem.V, type:'scatter', mode:'lines', name:'V', line: { color: colorChoices['V']}}
     const trace2 = { x:time, y:mem.Ic, type:'scatter', mode:'lines', name:'I<sub>C</sub>',  yaxis: 'y2', line: { color: colorChoices['Ic']}, opacity:0.5}
     const trace3 = { x:time, y:mem.V, type:'scatter', mode:'lines', name:'I<sub>R</sub>',  yaxis: 'y2', line: { color: colorChoices['Ir'], width:4, dash:'dot'}, opacity:0.5}
-    const trace4 = { x:[time[0], time[time.length -1]], y:[Iinj*R, Iinj*R], type:'scatter', mode:'lines', name:'V<sub>max</sub>=I<sub>max</sub>R', line: { color: '#ff2a6d', dash:'dot'}, opacity:0.5}
+    const trace4 = { x:[time[0], time[time.length -1]], y:[Iinj*R, Iinj*R], type:'scatter', mode:'lines', name:'|ΔV<sub>max</sub>|=I<sub>max</sub>R', line: { color: '#ff2a6d', dash:'dot'}, opacity:0.5}
 
     const trace5 = { x:time, y:I, type:'scatter', mode:'lines', name:'I<sub>injected</sub>', yaxis: 'y3', line: { color: colorChoices['Iinj']}}
 
