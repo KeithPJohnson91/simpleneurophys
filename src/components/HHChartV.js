@@ -67,9 +67,9 @@ const HHChartV = ({ Vhold, totalTime, stimDur }) => {
                         spikecolor: "white"
                     },
                     yaxis: {title: 'mV', range: [-129, 5], domain: [0.85, 1], tickvals: [-100, -50, 0, 50], zeroline: false},
-                    yaxis2: {title: 'mA', range: [-999, 999], tickvals: [-500, 0, 500], domain: [0.5, 0.85], zeroline: false},
+                    yaxis2: {title: 'µA/cm<sup>2</sup>', range: [-999, 999], tickvals: [-500, 0, 500], domain: [0.5, 0.85], zeroline: false},
                     yaxis3: {title: 'prob.', range: [-.1, 1.1], tickvals: [0, 0.5, 1], zeroline: false},
-                    yaxis4: {title: 'mS', range: [-5, 49], tickvals: [0, 20, 40], zeroline: false}
+                    yaxis4: {title: 'mS/cm<sup>2</sup>', range: [-5, 49], tickvals: [0, 20, 40], zeroline: false}
                 }  
             } 
             config = {

@@ -70,10 +70,10 @@ const HHChart = ({ Iinj, totalTime, stimDur }) => {
                         spikecolor: "white"
                     },
                     yaxis: {title: 'mV', range: [-129, 60], domain: [0.7, 1], tickvals: [-100, -50, 0, 50], zeroline: false},
-                    yaxis2: {title: 'mA<sub>inj.</sub>', range: [-62, 100], tickvals: [-50, 0, 50], domain: [0.6, .69]},
-                    yaxis3: {title: 'mA', range: [-999, 999], tickvals: [-500, 0, 500], zeroline: false},
+                    yaxis2: {title: 'µA/cm<sup>2</sup><sub>inj.</sub>', range: [-62, 100], tickvals: [-50, 0, 50], domain: [0.6, .69]},
+                    yaxis3: {title: 'µA/cm<sup>2</sup>', range: [-999, 999], tickvals: [-500, 0, 500], zeroline: false},
                     yaxis4: {title: 'prob.', range: [-.1, 1.1], tickvals: [0, 0.5, 1], zeroline: false},
-                    yaxis5: {title: 'mS', range: [-5, 49], tickvals: [0, 20, 40], zeroline: false}
+                    yaxis5: {title: 'mS/cm²', range: [-5, 49], tickvals: [0, 20, 40], zeroline: false}
                 }  
             } 
             config = {
