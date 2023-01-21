@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState, useEffect } from 'react';
 import PassiveMembraneChart from './PassiveMembraneChart';
 import MySlider from './MyStyledSlider';
 import colorChoices from '../colorChoices';
@@ -19,6 +19,13 @@ const PassiveMembraneInteractiveChart = ({_classNameComponents}) => {
     const updateCVal = (e, v) => {
         setCValue(v);
     }
+
+    useEffect(() => {
+        const metaTag = document.createElement('meta');
+        metaTag.name = "description";
+        metaTag.content = "Interactive simulation of current injection into a passive membrane (RC-Circuit)";
+        document.head.appendChild(metaTag);
+    })
 
     return (
         <div className={_classNameComponents}>

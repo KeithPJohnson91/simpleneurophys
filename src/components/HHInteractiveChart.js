@@ -1,4 +1,4 @@
-import { useState} from 'react';
+import { useState, useEffect} from 'react';
 import HHChart from './HHChart';
 import MySlider from './MyStyledSlider';
 import colorChoices from '../colorChoices';
@@ -18,9 +18,16 @@ const PassiveMembraneInteractiveChart = ({_classNameComponents}) => {
         setTValue(v);
       }
     
-      const updateSVal = (e, v) => {
+    const updateSVal = (e, v) => {
         setSValue(v);
-      }
+    }
+
+    useEffect(() => {
+        const metaTag = document.createElement('meta');
+        metaTag.name = "description";
+        metaTag.content = "Interactive Hodgkin-Huxley model simulation of current injection into membrane patch";
+        document.head.appendChild(metaTag);
+    })
      
     
 
