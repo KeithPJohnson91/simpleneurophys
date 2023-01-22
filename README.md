@@ -1,4 +1,4 @@
-# simpleneurophys.com
+# [simpleneurophys.com](https://www.simpleneurophys.com)
 # Chat-GPT wrote this
 
 Welcome to the source code repository for simpleneurophys.com, an interactive, real-time neurophysiology simulation tool. 
