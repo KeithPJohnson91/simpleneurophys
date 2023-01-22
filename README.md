@@ -1,7 +1,7 @@
 # Simple Neurophysiology
 # Chat-GPT wrote this
 
-Welcome to the source code repository for simplenurophys.com, an interactive, real-time neurophysiology simulation tool. 
+Welcome to the source code repository for simpleneurophys.com, an interactive, real-time neurophysiology simulation tool. 
 
 ## Features
 
